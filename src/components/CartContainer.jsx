@@ -82,7 +82,7 @@ const CartContainer = () => {
                 ) : (
                     <div className='w-full h-full flex items-center justify-center text-gray-50 font-semibold text-lg'>Cart is empty.</div>
                 )}
-            
+                { cartItems.length > 0 ?
                 <div className='w-full gap-3 flex-1 bg-cartTotal rounded-t-[2rem] flex flex-col items-end justify-center px-8 py-2'>
                     <div className='w-full flex flex-col items-center justify-center px-8 py-2'>
                     <div className='w-full flex items-center justify-between'>
@@ -109,7 +109,7 @@ const CartContainer = () => {
                         <p onClick={login} className=' text-white py-2 text-lg uppercase'>Login to checkout</p>
                     </motion.button>)
                     }
-                </div>
+                </div>: <div></div> }
             </div>
 
         </motion.div>
